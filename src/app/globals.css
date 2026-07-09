@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Colors */
+  --color-bg-primary: #FAF7F2;
+  --color-bg-secondary: #F2ECE1;
+  --color-bg-accent: #FAF2E8;
+  --color-text-primary: #1F1D1A;
+  --color-text-secondary: #5A5149;
+  --color-text-muted: #8A7F72;
+  --color-accent-primary: #9C4A3B;
+  --color-accent-secondary: #7A8F7F;
+  --color-border-subtle: rgba(31, 29, 26, 0.08);
+  --color-border-medium: rgba(31, 29, 26, 0.15);
+  --color-border-strong: rgba(31, 29, 26, 0.25);
+}
+
+:root {
+  --bg-primary: #FAF7F2;
+  --bg-secondary: #F2ECE1;
+  --bg-accent: #FAF2E8;
+  --text-primary: #1F1D1A;
+  --text-secondary: #5A5149;
+  --text-muted: #8A7F72;
+  --accent-primary: #9C4A3B;
+  --accent-secondary: #7A8F7F;
+  --border-subtle: rgba(31, 29, 26, 0.08);
+  --border-medium: rgba(31, 29, 26, 0.15);
+  --border-strong: rgba(31, 29, 26, 0.25);
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-noto-sans-jp), 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 300;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Font classes ── */
+
+/* 일본어 본문 */
+.font-jp-body {
+  font-family: var(--font-noto-sans-jp), 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 300;
+}
+
+/* 일본어 제목 (세리프) */
+.font-jp-title {
+  font-family: var(--font-noto-serif-jp), 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  font-weight: 400;
+}
+
+/* 영문 장식 라벨 */
+.font-en-label {
+  font-family: var(--font-cormorant), 'Hiragino Mincho ProN', serif;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* 영문 본문 / 숫자 */
+.font-en-body {
+  font-family: var(--font-inter), sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* 한국어 (Phase 2) */
+.font-ko {
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-family: var(--font-cormorant), serif;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--accent-primary);
+}
+
+/* ── Photo placeholder ── */
+.photo-placeholder {
+  background-color: #C5A891;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-placeholder::after {
+  content: attr(data-caption);
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-inter), sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 2px;
+}

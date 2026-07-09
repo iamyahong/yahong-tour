@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://yahongtour.com
+
+# Sitemaps
+Sitemap: https://yahongtour.com/sitemap.xml

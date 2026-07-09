@@ -1,0 +1,11 @@
+{
+  "_note": "Phase 1: 日本語のみ完全実装。ko.json / en.json は Phase 2 で対応。",
+  "nav": {
+    "experience": "体験",
+    "sightseeing": "観光地",
+    "food": "食",
+    "shopping": "買物",
+    "reviews": "レビュー",
+    "about": "私について"
+  }
+}
