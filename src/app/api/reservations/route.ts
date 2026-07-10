@@ -41,8 +41,11 @@ export async function POST(req: NextRequest) {
       .single();
 
     if (dbError) {
-      console.error("[reservations] DB insert error:", dbError.message);
-      return NextResponse.json({ error: dbError.message }, { status: 500 });
+      console.error("[reservations] DB insert error:", dbError);
+      return NextResponse.json(
+        { error: "送信に失敗しました。もう一度お試しください。" },
+        { status: 500 }
+      );
     }
 
     console.log("[reservations] Inserted reservation id:", reservation.id);
